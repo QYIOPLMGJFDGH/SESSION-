@@ -23,7 +23,7 @@ async def cb_choose(_, cq: CallbackQuery):
                 await gen_session(cq.message, cq.from_user.id)
             elif query == "pyrogram1":
                 await gen_session(cq.message, cq.from_user.id, old_pyro=True)          
-            elif query == "pyrogram3":
+            elif query == "pyrogram_v3":
                 await gen_session(cq.message, cq.from_user.id, pyro_v3=True)
             elif query == "telethon":
                 await gen_session(cq.message, cq.from_user.id, telethon=True)
