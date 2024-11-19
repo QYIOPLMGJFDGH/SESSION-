@@ -7,7 +7,7 @@ from StringGen.modules.gen import gen_session
 
 
 @Anony.on_callback_query(
-    filters.regex(pattern=r"^(gensession|pyrogram|pyrogram1|telethon)$")
+    filters.regex(pattern=r"^(gensession|pyrogram|pyrogram1|telethon|pyrogram_v3)$")
 )
 async def cb_choose(_, cq: CallbackQuery):
     await cq.answer()
@@ -22,7 +22,9 @@ async def cb_choose(_, cq: CallbackQuery):
             if query == "pyrogram":
                 await gen_session(cq.message, cq.from_user.id)
             elif query == "pyrogram1":
-                await gen_session(cq.message, cq.from_user.id, old_pyro=True)
+                await gen_session(cq.message, cq.from_user.id, old_pyro=True)          
+            elif query == "pyrogram3":
+                await gen_session(cq.message, cq.from_user.id, pyro_v3=True)
             elif query == "telethon":
                 await gen_session(cq.message, cq.from_user.id, telethon=True)
         except Exception as e:
