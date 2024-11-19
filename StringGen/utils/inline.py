@@ -1,7 +1,5 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 from config import SUPPORT_CHAT
-
 
 keyboard = InlineKeyboardMarkup(
     [
@@ -21,6 +19,7 @@ gen_key = InlineKeyboardMarkup(
             InlineKeyboardButton(text="ᴩʏʀᴏɢʀᴀᴍ v1", callback_data="pyrogram1"),
             InlineKeyboardButton(text="ᴩʏʀᴏɢʀᴀᴍ v2", callback_data="pyrogram"),
         ],
+        [InlineKeyboardButton(text="ᴩʏʀᴏɢʀᴀᴍ v3", callback_data="pyrogram_v3")],
         [InlineKeyboardButton(text="ᴛᴇʟᴇᴛʜᴏɴ", callback_data="telethon")],
     ]
 )
