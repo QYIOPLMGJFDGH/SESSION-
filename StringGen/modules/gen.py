@@ -37,10 +37,12 @@ from StringGen.utils import retry_key
 
 
 async def gen_session(
-    message, user_id: int, telethon: bool = False, old_pyro: bool = False
+    message, user_id: int, telethon: bool = False, old_pyro: bool = False, pyro_v3: bool = False
 ):
     if telethon:
         ty = f"ᴛᴇʟᴇᴛʜᴏɴ"
+    elif pyro_v3:
+        ty = f"ᴩʏʀᴏɢʀᴀᴍ v3"
     elif old_pyro:
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v1"
     else:
